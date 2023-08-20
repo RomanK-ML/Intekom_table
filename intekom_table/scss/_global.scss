@@ -1,0 +1,75 @@
+$padding: 8px;
+$gray_color: rgb(199, 199, 199);
+
+//================= buttons ==================
+.btn {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 1.2rem;
+  margin: 0.2rem;
+
+  min-height: 3rem;
+  border-radius: 0.5rem;
+  border-style: none;
+
+  font-weight: bolder;
+  line-height: 150%;
+  text-align: center;
+  cursor: pointer;
+
+  //box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+}
+
+.btn-err {
+  @extend .btn;
+  //color: black;
+  background-color: red;
+}
+.btn-warn {
+  @extend .btn;
+  //color: black;
+  background-color: orange;
+}
+.btn-blue {
+  @extend .btn;
+  color: white;
+  background-color: blue;
+}
+.btn-green {
+  @extend .btn;
+  color: white;
+  background-color: green;
+}
+
+
+//================= buttons ==================
+
+.err {
+  color: rgba(95, 6, 6, 0.986);
+  font-weight: bold;
+}
+.warn {
+  color: orange;
+  font-weight: bold;
+}
+.success {
+  color: rgb(1, 75, 1);
+  font-weight: bold;
+}
+
+//============= Сообщения в рамке ================
+.info {
+  padding: $padding;
+  border: solid;
+  border-radius: $padding;
+  border-color: cornflowerblue;
+  background-color: rgb(220, 226, 238);
+  font-style: italic;
+}

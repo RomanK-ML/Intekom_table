@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link href="css/tabulator.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="container header">
+        <div class="plagin-logo">
+            <a href="#">
+                <img class="intk1500-logo" src="./img/plugin_web.png" alt="intekom 1500 logo"/>
+            </a>
+        </div>
+        <div class="space"></div>
+        <div class="login">
+            <div>
+                <p class="login__name">Супер пользователь</p>
+                <p class="login__role">администратор</p>
+            </div>
+            <button class="btn-exit">выйти</button>
+        </div>
+        <div class="intekom-logo">
+            <img class="intecom-logo" src="./img/intekom_web.png" alt="intekom logo"/>
+        </div>
+    </header>
+    <main class="container main">
+        <nav class="tabs">
+            <a href="#tab_01" class="tab">Мониторинг</a>
+            <a href="#tab_02" class="tab">Пользователи</a>
+            <a href="#tab_03" class="tab">Маршрутизация</a>
+            <a href="#tab_04" class="tab">Настройки</a>
+        </nav>
+        <div class="tabs-body">
+            <div id="tab_01" class="tabs-block">
+                <section class="monitoring">
+                    <div class="sys-state">
+                        <div class="card width30">
+                            <div class="card__header">Аппаратура</div>
+                            <div class="card__body">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Нагрузка</td>
+                                        <td><img src="./img/status_green.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Память</td>
+                                        <td><img src="./img/status_red.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Сервисы</td>
+                                        <td><img src="./img/status_orange.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ошибки</td>
+                                        <td><span class="err">234</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Предупреждения</td>
+                                        <td><span class="warn">456</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Сообщений</td>
+                                        <td><span class="success">1789</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card__footer">
+                                <span>И того:</span><span>В порядке</span>
+                            </div>
+                        </div>
+                        <div class="card width30">
+                            <div class="card__header">Телефония</div>
+                            <div class="card__body">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Всего пользователей</td>
+                                        <td>10000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Зарегистрировано</td>
+                                        <td>5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Активных звонков</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Активных конференций</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Внешних линий</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>занятых внешних линий</td>
+                                        <td>20</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card width30">
+                            <div class="card__header">Сервис</div>
+                            <div class="card__body">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Пульт 1 (АСУТП)</td>
+                                        <td><img src="./img/status_red.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пульт 2 (Бух)</td>
+                                        <td><img src="./img/status_green.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пульт 3 (Отд 1)</td>
+                                        <td><img src="./img/status_green.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пульт 4 (Отд 2)</td>
+                                        <td><img src="./img/status_green.png"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodes">
+                        <div class="table-responsive">
+                            <table class="table-styled">
+                                <caption>
+                                    Список узлов системы (nodes)
+                                </caption>
+                                <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th></th>
+                                    <th>Host</th>
+                                    <th>Роль</th>
+                                    <th>IP Address</th>
+                                    <th>CPU, %</th>
+                                    <th>Mem, %</th>
+                                    <th>HDD, %</th>
+                                    <th>t&deg;С</th>
+                                    <th>Действия</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="./img/status_green.png"/></td>
+                                    <td>kam1</td>
+                                    <td>Основной</td>
+                                    <td>192.168.1.171</td>
+                                    <td>30%</td>
+                                    <td>40%</td>
+                                    <td>50%</td>
+                                    <td>56&deg;С</td>
+                                    <td>
+                                        <button>Подробнее</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="./img/status_green.png"/></td>
+                                    <td>kam2</td>
+                                    <td>Резерв</td>
+                                    <td>192.168.1.172</td>
+                                    <td>10%</td>
+                                    <td>20%</td>
+                                    <td>50%</td>
+                                    <td>36&deg;С</td>
+                                    <td>
+                                        <button>Подробнее</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><img src="./img/status_green.png"/></td>
+                                    <td>gw1</td>
+                                    <td>Media GW 1</td>
+                                    <td>192.168.1.173</td>
+                                    <td>30%</td>
+                                    <td>40%</td>
+                                    <td>50%</td>
+                                    <td>56&deg;С</td>
+                                    <td>
+                                        <button>Подробнее</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><img src="./img/status_green.png"/></td>
+                                    <td>gw2</td>
+                                    <td>Media GW 2</td>
+                                    <td>192.168.1.174</td>
+                                    <td>30%</td>
+                                    <td>40%</td>
+                                    <td>50%</td>
+                                    <td>56&deg;С</td>
+                                    <td>
+                                        <button>Подробнее</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><img src="./img/status_red.png"/></td>
+                                    <td>gw 3</td>
+                                    <td>Media GW 3</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>
+                                        <button>Подробнее</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="log-buttons">
+                        <button class="btn-err">Смотреть логи ошибок 234</button>
+                        <button class="btn-warn">
+                            Смотреть логи предупреждений 456
+                        </button>
+                        <button class="btn">Смотреть логи сообщений 1789</button>
+                    </div>
+                </section>
+            </div>
+            <div id="tab_02" class="tabs-block">
+                <section>
+                    <div class="flex-box">
+                        <h1>Пользователи</h1>
+                        <button class="btn">Администраторы</button>
+                    </div>
+                    <hr/>
+                    <div class="flex-box">
+                        <button class="btn-green">Создать нового пользователя</button>
+                        <div class="space"></div>
+                        <div class="flex-box">
+                            <input class="input-text" type="text" placeholder="Поиск пользователя"/>
+                            <label for="by">искать</label>
+                            <select id="by" class="input-select">
+                                <option value="number">по номеру</option>
+                                <option value="ip">по адресу</option>
+                                <option value="desc">по описанию</option>
+                            </select>
+                            <label for="show">показывать по</label>
+                            <select id="show" class="input-select">
+                                <option value="number">10</option>
+                                <option value="ip">20</option>
+                                <option value="desc">50</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table-styled">
+                            <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>
+                                    Номер
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="h-5 w-5"
+                                         fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+                                    </svg>
+                                </th>
+                                <th>IP Address</th>
+                                <th>Описание</th>
+                                <th>Права</th>
+                                <th></th>
+                                <th>Действия</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>6000</td>
+                                <td>192.168.1.41</td>
+                                <td>Василий Пертович - начальник Отд 1</td>
+                                <td>Диспетчер</td>
+                                <td>
+                                    <img src="./img/status_red.png" title="Off line"/>
+                                </td>
+                                <td>
+                                    <button title="изменить">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button title="Удалить">
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2011</td>
+                                <td>192.168.1.42</td>
+                                <td>Бухгалтерия</td>
+                                <td>Пользователь</td>
+                                <td>
+                                    <img src="./img/status_green.png" title="On line"/>
+                                </td>
+                                <td>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2012</td>
+                                <td>192.168.1.143</td>
+                                <td>Отдел программного обеспечения</td>
+                                <td>Пользователь</td>
+                                <td>
+                                    <img src="./img/status_green.png" title="On line"/>
+                                </td>
+                                <td>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2013</td>
+                                <td>10.0.1.42</td>
+                                <td>Филиал №3</td>
+                                <td>Пользователь</td>
+                                <td>
+                                    <img src="./img/status_orange.png" title="Заблокирован"/>
+                                </td>
+                                <td>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2014</td>
+                                <td>192.168.1.44</td>
+                                <td>Водитель</td>
+                                <td>Пользователь</td>
+                                <td>
+                                    <img src="./img/status_green.png" title="On line"/>
+                                </td>
+                                <td>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>2016</td>
+                                <td>192.168.1.46</td>
+                                <td>Павел</td>
+                                <td>Пользователь</td>
+                                <td>
+                                    <img src="./img/status_green.png" title="On line"/>
+                                </td>
+                                <td>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                             viewBox="0 0 24 24"
+                                             class="inline-block w-4 h-4 stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button>
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="red"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="table-footer">
+                            <div>Показаны:</div>
+                            <div>1 - 6</div>
+                            <div>Страница:</div>
+                            <div>1 из 1</div>
+                            <button>
+                                <<< /button>
+                                <button>
+                                    << /button>
+                                    <button>></button>
+                                    <button>>></button>
+                                </button>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="btn">
+                                Экспорт в CSV
+                            </button>
+                            <button class="btn" onclick="impCsv.open()">
+                                Импорт из CSV
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="tab_03" class="tabs-block">
+                <h1>Маршрутизация</h1>
+                <hr/>
+                <!-- Меню слева -->
+                <div class="box">
+                    <div class="card">
+                        <div class="card__header">Menu</div>
+                        <div class="vmenu">
+                            <a href="#trunks">Транки</a>
+                            <a href="#groups">Группы</a>
+                            <a href="#">Входящие правила</a>
+                            <a href="#">Исходящие</a>
+                            some text
+                        </div>
+                    </div>
+
+                    <!--
+                    <div id="trunks">
+                      <h2>Content</h2>
+
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi a, recusandae odit cumque ab
+                        blanditiis consectetur obcaecati facere laudantium maiores cum temporibus ad et quidem earum adipisci
+                        tempore. Exercitationem.</p>
+                    </div>
+                    -->
+
+
+                    <!-- Группы -->
+                    <div style="max-width: 100%">
+                    <div style="max-width: 100%;"><input type="text" id="search" required minlength="4" size="10" /></div>
+                    <div id="table-container" style=" max-width: 100%"></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div id="tab_04" class="tabs-block">
+                page 4: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus asperiores nostrum, assumenda dicta consectetur magnam
+                perspiciatis aspernatur perferendis consequuntur esse sapiente
+                dolorem illo quaerat voluptatibus eligendi soluta! Vitae, corporis
+                a?
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">footer</footer>
+</div>
+
+<!-- Modal window to import users from CSV -->
+<div id="import-users-csv" class="popup">
+    <!-- Затемнение на весь экран -->
+    <div class="popup__overlay">
+        <!-- Само всплывающее окно -->
+        <div class="popup__window">
+            <div class="popup__header">
+                <span class="popup__title">Импорт абонентов</span>
+                <!-- Закрывающий крестик -->
+                <span class="popup__close" onclick="impCsv.close()">&#10006;</span>
+            </div>
+            <hr/>
+            <div class="popup__content">
+                <p>
+                    Производит импорт абонентов из заранее подготовленного .csv файла.
+                    Выберите нужный файл на Вашем диске и нажмите "Импортировать".
+                </p>
+                <div class="info">
+                    <strong>ВНИМАНИЕ!</strong> Импорт не удаляет имеющихся пользователей, а добавляет новых.
+                    Если пользователь с таким именем уже существует, то его данные будут обновлены.
+                </div>
+                <br/>
+                <div>
+                    <label for="csvfile">Выбор файла:</label>
+                    <input id="csvfile" name="csvfile" type="file"/>
+                </div>
+                <div id="import_err" class="alert alert-error" role="alert"></div>
+                <div id="import_success" class="alert alert-success" role="alert"></div>
+            </div>
+            <hr/>
+            <!-- Кнопки -->
+            <div class="popup__footer">
+                <button class="btn">Ok</button>
+                <button class="btn" onclick="impCsv.close()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/popup.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/tabulator.min.js"></script>
+<script src="js/table_init.js"></script>
+
+</body>
+
+</html>

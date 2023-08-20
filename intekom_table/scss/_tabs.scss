@@ -1,0 +1,46 @@
+// Tabs
+
+.tabs {
+    //display: flex;
+    //flex-wrap: wrap;
+    //align-items: flex-end;
+    //width: 100%;
+    //padding: 0.5rem;
+    //background: rgb(241, 157, 157);
+    border-bottom: 1px solid rgb(75, 87, 113);
+    margin-bottom: 1rem;
+
+    .active {
+        color: black;
+        background-color: antiquewhite;
+    }
+
+    a {
+        color: beige;
+        text-decoration: none;
+        //font-weight: bold;
+    }
+
+    .tab {
+        padding: 0.5rem 1rem;
+        //margin: 0 0.5rem;
+        //align-items: center;
+
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        //border-bottom-left-radius: 8px;
+        //border-bottom-right-radius: 8px;
+    }
+}
+
+.tabs-body {
+    .tabs-block {
+        display: none;
+        width: 100%;
+    }
+
+    .active {
+        display: inline-block;
+    }
+}
+

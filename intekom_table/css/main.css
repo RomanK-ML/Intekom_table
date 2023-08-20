@@ -1,0 +1,422 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.btn, .btn-exit, .btn-green, .btn-blue, .btn-warn, .btn-err {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 1.2rem;
+  margin: 0.2rem;
+  min-height: 3rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  font-weight: bolder;
+  line-height: 150%;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover, .btn-exit:hover, .btn-green:hover, .btn-blue:hover, .btn-warn:hover, .btn-err:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-err {
+  background-color: red;
+}
+
+.btn-warn {
+  background-color: orange;
+}
+
+.btn-blue {
+  color: white;
+  background-color: blue;
+}
+
+.btn-green {
+  color: white;
+  background-color: green;
+}
+
+.err {
+  color: rgba(95, 6, 6, 0.986);
+  font-weight: bold;
+}
+
+.warn {
+  color: orange;
+  font-weight: bold;
+}
+
+.success {
+  color: rgb(1, 75, 1);
+  font-weight: bold;
+}
+
+.info {
+  padding: 8px;
+  border: solid;
+  border-radius: 8px;
+  border-color: cornflowerblue;
+  background-color: rgb(220, 226, 238);
+  font-style: italic;
+}
+
+.tabs {
+  border-bottom: 1px solid rgb(75, 87, 113);
+  margin-bottom: 1rem;
+}
+.tabs .active {
+  color: black;
+  background-color: antiquewhite;
+}
+.tabs a {
+  color: beige;
+  text-decoration: none;
+}
+.tabs .tab {
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tabs-body .tabs-block {
+  display: none;
+  width: 100%;
+}
+.tabs-body .active {
+  display: inline-block;
+}
+
+.card {
+  border: 2px solid;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+.card__header {
+  padding: 0.5rem;
+  color: black;
+  background-color: rgb(199, 199, 199);
+  line-height: 24px;
+}
+.card__body {
+  padding: 0.5rem;
+}
+.card__footer {
+  padding: 0.5rem;
+  color: black;
+  background-color: rgb(199, 199, 199);
+  line-height: 24px;
+}
+.card__footer span {
+  margin: 0 1rem;
+}
+
+.width30 {
+  width: 30%;
+}
+
+.table-styled {
+  width: 100%;
+  white-space: nowrap;
+  border-collapse: collapse;
+  color: black;
+  margin: 0.5rem 0;
+}
+.table-styled caption {
+  color: white;
+  font-weight: bold;
+}
+.table-styled th,
+.table-styled td {
+  text-align: center;
+  padding: 0.5rem;
+}
+.table-styled thead {
+  background-color: rgb(199, 199, 199);
+}
+.table-styled tbody tr:hover td {
+  background: #b6bcce;
+  transition: all 0.3s;
+}
+.table-styled tbody tr:nth-child(odd) {
+  background: #fff;
+}
+.table-styled tbody tr:nth-child(even) {
+  background: rgba(247, 247, 247, 0.862745098);
+}
+.table-styled tbody button {
+  border-radius: 0.5rem;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-bottom: 0.5rem;
+}
+.table-footer div {
+  padding: 0 0.5rem;
+}
+.table-footer button {
+  border-radius: 0.5rem;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+  font-weight: bolder;
+  line-height: 150%;
+  text-align: center;
+}
+.table-footer button:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.table-footer button:first-of-type {
+  margin-left: 1rem;
+}
+
+label {
+  margin: 0 0.5rem;
+}
+
+.input-text {
+  width: 15em;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+.input-select {
+  width: auto;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: black;
+  background-color: antiquewhite;
+}
+
+.column {
+  flex: 1 1 auto;
+  min-width: 250px;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  background-color: green;
+}
+
+.graph {
+  background-color: black;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+}
+.popup.open {
+  visibility: visible;
+}
+.popup__window {
+  width: 500px;
+  margin: 100px auto;
+  border-radius: 8px;
+  background-color: white;
+}
+.popup__header {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup__title {
+  font-size: larger;
+  font-weight: bold;
+}
+.popup__close {
+  cursor: pointer;
+  font-size: 20px;
+}
+.popup__content {
+  padding: 1rem;
+}
+.popup__footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: end;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+}
+
+.vmenu {
+  padding: 1rem;
+  min-width: 200px;
+}
+.vmenu a {
+  display: block;
+  margin-bottom: 1rem;
+  color: beige;
+  text-decoration: none; /* no underline */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(62, 85, 116);
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 1.2rem 0.5rem;
+  background-color: rgb(103, 114, 136);
+  box-sizing: border-box;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.space {
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .plagin-logo {
+  flex: 0 0 20%;
+}
+.header .login {
+  display: flex;
+  padding: 0 1rem;
+}
+.header .login div {
+  padding: 0 1rem;
+}
+.header .login .login__name {
+  font-size: large;
+}
+.header .login .login__role {
+  font-size: small;
+}
+.header .intekom-logo {
+  flex: 0 0 15%;
+}
+
+.btn-exit {
+  color: white;
+  background: rgb(75, 87, 113);
+}
+.btn-exit:hover {
+  background: black;
+  color: white;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.main .sys-state {
+  display: flex;
+  justify-content: space-between;
+}
+.main .nodes {
+  padding: 1rem 0;
+}
+.main .nodes table {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,80 @@
+.table-styled {
+    width: 100%;
+    white-space: nowrap;
+    border-collapse: collapse;
+    color: black;
+    margin: 0.5rem 0;
+    //box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); //???
+
+    caption {
+        color: white;
+        font-weight: bold;
+    }
+
+    th,
+    td {
+        text-align: center; // Все по центру
+        padding: 0.5rem; // Высота ячеек
+    }
+
+    thead {
+        background-color: $gray_color;
+    }
+
+    tbody {
+        // серая подсветка при наведении на строку
+        tr:hover td {
+            background: #b6bcce;
+            transition: all 0.3s;
+        }
+
+        tr:nth-child(odd) {
+            background: #fff;
+        }
+        tr:nth-child(even) {
+            background: #f7f7f7dc;
+        }
+
+        button {
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+// Строка пагинации для таблицы.
+.table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-bottom: 0.5rem;
+
+    div {
+        padding: 0 0.5rem;
+    }
+    button {
+        border-radius: 0.5rem;
+        background-color: $gray_color;
+        cursor: pointer;
+        font-weight: bolder;
+        line-height: 150%;
+        text-align: center;
+
+
+
+        &:hover {
+            color: white;
+            background-color: black;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+
+    // Отступ первой кнопки "<<" слева.
+    button:first-of-type {
+        margin-left: 1rem;
+    }
+}
+
+// почему-то не работает
+// .table-responsive {
+//     overflow-x: auto; // Для скрола таблицы по горизонтали
+// }

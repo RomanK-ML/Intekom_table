@@ -1,0 +1,19 @@
+.box {
+    display: flex;
+    //flex-wrap: wrap;
+    //gap: 1rem;
+}
+
+.vmenu {
+    padding: 1rem;
+    //border-right: 2px solid white;
+    min-width: 200px;
+
+    // Очистить стили списка меню
+    a {
+        display: block;
+        margin-bottom: 1rem;
+        color: beige;
+        text-decoration: none; /* no underline */
+    }
+}

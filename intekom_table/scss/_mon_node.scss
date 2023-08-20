@@ -1,0 +1,25 @@
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    color: black;
+    background-color: antiquewhite;
+}
+
+.column {
+    flex: 1 1 auto;
+    min-width: 250px;
+    //width: 45%;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    color: black;
+    background-color: green;
+}
+
+.graph {
+    background-color: black;
+}

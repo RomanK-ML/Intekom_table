@@ -1,0 +1,12 @@
+{
+  "name": "intekom_table",
+  "version": "1.0.0",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "sequelize": "^6.32.1",
+    "tabulator-tables": "^5.5.1"
+  }
+}

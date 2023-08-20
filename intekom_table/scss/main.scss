@@ -1,0 +1,121 @@
+@import "_clearing.scss";
+@import "_global.scss";
+@import "_tabs.scss";
+@import "_card.scss";
+@import "_tables.scss";
+@import "_input.scss";
+@import "_mon_node.scss";
+@import "_modal.scss";
+@import "_box.scss";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    background-color: rgb(62, 85, 116);
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    //display: flex;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 1.2rem 0.5rem;
+    background-color: rgb(103, 114, 136);
+    //box-sizing: border-box;
+    //align-items: center;
+    //border-radius: .5rem;
+    box-sizing: border-box;
+    border-radius: var(--rounded-box, 1rem);
+}
+
+.space {
+    flex: 1 1 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .plagin-logo {
+        flex: 0 0 20%;
+    }
+
+    .login {
+        display: flex;
+        padding: 0 1rem;
+
+        div {
+            padding: 0 1rem;
+        }
+
+        .login__name {
+            font-size: large;
+        }
+
+        .login__role {
+            font-size: small;
+        }
+    }
+
+    .intekom-logo {
+        flex: 0 0 15%;
+    }
+}
+
+.btn-exit {
+    @extend .btn;
+    color: white;
+    background: rgb(75, 87, 113);
+
+    &:hover {
+        background: black;
+        color: white;
+        //transition: all 1s ease;
+        //box-shadow: inset 0 0 0 3px white;
+    }
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    //display: flex;
+    //flex-direction: column;
+    flex: 1 1 auto;
+    //flex-wrap: wrap;
+
+    // .monitoring {
+    //     width: 100%;
+    // }
+
+    .sys-state {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nodes {
+        padding: 1rem 0;
+
+        table {
+            text-align: center
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
