@@ -7,9 +7,14 @@
     <link href="css/tabulator.min.css" rel="stylesheet">
 </head>
 <body>
-<div id="table-container" style=" max-width: 1600px"></div>
+<div style="width: 100%">
+    <div id="table-container" style=" max-width: 100%"></div>
+</div>
 
-<script type="text/javascript" src="js/tabulator.min.js"></script>
-<script src="js/table_init.js"></script>
+
+<script type="text/javascript" src="js/tabulator/polyfill.js"></script>
+<script type="text/javascript" src="js/tabulator/fetch.min.js"></script>
+<script type="text/javascript" src="js/tabulator/tabulator.min.js"></script>
+<script src="js/table_init_ie11.js"></script>
 </body>
 </html>

@@ -53,27 +53,17 @@ class DataBaseServer {
 
         const calls = this.callList(page, size);
         const dataLabels = [
-          { title: "№", field: "id", hozAlign: "center", headerHozAlign: "center", headerFilter: "input" },
-          { title: "Дата", field: "date", hozAlign: "center", headerHozAlign: "center", headerFilter: "input", editor: "input", editable: editCheck, validator: "minLength:10", editorParams: { search: true, mask: "9999-99-99" } },
-          { title: "Номер", field: "phoneNumber", hozAlign: "center", headerHozAlign: "center", editor: "input", headerFilter: "input", editable: editCheck, validator: "minLength:16", editorParams: { search: true, mask: "+9(999) 999-9999" } },
-          { title: "Контактное лицо", field: "contact_name", hozAlign: "center", headerHozAlign: "center", editor: "input", headerFilter: "input", editable: editCheck, editorParams: { search: true, elementAttributes: { maxlength: "20" } } },
-          { title: "Ожидание", field: "expectation", hozAlign: "center", headerHozAlign: "center", headerFilter: "input", editable: editCheck, editor: "number", validator: "min:0", editorParams: { search: true, min: 0, max: 99, mask: "99" } },
-          { title: "Длительность", field: "duration", hozAlign: "center", headerHozAlign: "center", headerFilter: "input", editable: editCheck, editor: "number", validator: "min:0", editorParams: { search: true, min: 0, max: 999, mask: "999" } },
-          { title: "Тип", field: "type_call", hozAlign: "center", headerHozAlign: "center", headerFilter: "input", editable: editCheck, editor: "select", editorParams: { defaultValue: "Входящий", values: ["Входящий", "Исходящий"] } },
-          { title: "Статус", field: "status", hozAlign: "center", headerHozAlign: "center", headerFilter: true, editable: editCheck, editor: "select", editorParams: { defaultValue: "Ответ", values: ["Ответ", "Нет ответа"] } },
-        ];
-        const dataLabels = [
-          {title: "№", field: "id", hozAlign: "center", headerHozAlign: "center", headerFilter: "input"},
-          {title: "Дата", field: "date", hozAlign: "center", headerFilter: "input",  headerHozAlign: "center", editor: "input", editable:editCheck, validator:"minLength:10", editorParams: {search: true, mask : "9999-99-99"}},
-          {title: "Номер", field: "phoneNumber", hozAlign: "center", editor: "input", headerFilter: "input",  headerHozAlign: "center", editable:editCheck, validator:"minLength:16", editorParams: {search: true, mask : "+9(999) 999-9999"}},
-          {title: "Контактное лицо", field: "contact_name", hozAlign: "center", editor: "input", headerFilter: "input",  editable:editCheck, headerHozAlign: "center", editorParams: {search: true, elementAttributes: {maxlength: "20"}}},
-          {title: "Ожидание", field: "expectation", headerFilter: "input", hozAlign: "center", headerHozAlign: "center", editable:editCheck, editor: "number", validator:"min:0", editorParams: {search: true, min: 0, max: 99, mask: "99"}},
-          {title: "Длительность", field: "duration", headerFilter: "input", hozAlign: "center", headerHozAlign: "center", editable:editCheck, editor: "number", validator:"min:0", editorParams: {search: true, min: 0, max: 999, mask: "999"}},
-          {title: "Тип", field: "type_call", headerFilter: "input", hozAlign: "center", headerHozAlign: "center", editable:editCheck, editor: "select", editorParams:{defaultValue: "Входящий", values:["Входящий", "Исходящий"]} },
-          {title: "Статус", field: "status", headerFilter: true, hozAlign: "center", headerHozAlign: "center", editable:editCheck, editor: "select", editorParams:{defaultValue: "Ответ", values:["Ответ", "Нет ответа"]}},
+          { title: "№", field: "id", headerFilter: true, width: "80" },
+          { title: "Дата", field: "date", headerFilter: true, editor: "input", validator: "minLength:10", editorParams: { search: true, mask: "9999-99-99", maskAutoFill:true, } },
+          { title: "Номер", field: "phoneNumber", editor: "input", headerFilter: true, validator: "minLength:16", editorParams: { search: true, mask: "+9(999) 999-9999", maskAutoFill:true, } },
+          { title: "Контактное лицо", field: "contact_name", editor: "input", headerFilter: true, editorParams: { search: true, elementAttributes: { maxlength: "30" } } },
+          { title: "Ожидание", field: "expectation", headerFilter: true, editor: "number", validator: "min:0", editorParams: { search: true, min: 0, max: 999} },
+          { title: "Длительность", field: "duration", headerFilter: true, editor: "number", validator: "min:0", editorParams: { search: true, min: 0, max: 999} },
+          { title: "Тип", field: "type_call", headerFilter: true, headerFilterParams: { "Входящий": "Входящий", "Исходящий": "Исходящий" }, editor: "select", editorParams: { search: true, defaultValue: "Входящий", values: { "Входящий": "Входящий", "Исходящий": "Исходящий" } } },
+          { title: "Статус", field: "status", headerFilter: true, headerFilterParams: { "Ответ": "Ответ", "Нет ответа": "Нет ответа" }, editor: "select", editorParams: { search: true, defaultValue: "Ответ", values: { "Ответ": "Ответ", "Нет ответа": "Нет ответа" } } },
         ];
 
-        res.json({ last_page: last_page, dataLabels: dataLabels, currentPage: page, data: calls });
+        res.json({ last_page: last_page, dataLabels: dataLabels, data: calls });
       } catch (error) {
         console.error(error);
         res
