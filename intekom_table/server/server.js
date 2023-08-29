@@ -53,7 +53,7 @@ class DataBaseServer {
 
         const calls = this.callList(page, size);
         const dataLabels = [
-          { title: "№", field: "id", headerFilter: true, width: "80" },
+          { title: "№", field: "id", headerFilter: true },
           { title: "Дата", field: "date", headerFilter: true, editor: "input", validator: "minLength:10", editorParams: { search: true } },
           { title: "Номер", field: "phoneNumber", editor: "input", headerFilter: true, validator: "minLength:16", editorParams: { search: true } },
           { title: "Контактное лицо", field: "contact_name", editor: "input", headerFilter: true, editorParams: { search: true, elementAttributes: { maxlength: "30" } } },
