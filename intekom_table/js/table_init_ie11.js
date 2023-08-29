@@ -217,6 +217,7 @@ TabulatorTable.prototype.setupTable = function () {
 TabulatorTable.prototype.addHeaderPanel = function () {
     var headerPanel = document.createElement("div"); // Создание элемента <div> для заголовочной панели.
     headerPanel.style.maxWidth = "100%"; // Установка максимальной ширины панели.
+    headerPanel.className= "headerPanel"; // Установка класса панели.
 
     var button = document.createElement("button"); // Создание элемента <button> для кнопки "Добавить пользователя".
     button.setAttribute("type", "button"); // Установка атрибута "type" как "button".

@@ -1,7 +1,31 @@
 /* Tabulator v4.8.4 (c) Oliver Folkerd */
+
+button {
+    border-radius: 0.5rem;
+    margin:  0 0.1rem;
+}
+
+.headerPanel{
+    display: flex;
+    justify-content: space-between;
+    background-color: #c7c7c7;
+    max-width: 100%;
+    border: 1px solid #999;
+    border-bottom: none;
+}
+
+.headerPanel button{
+    margin: 0.5rem;
+}
+
+.headerPanel input{
+    margin: 0.5rem;
+}
+
 .tabulator {
     position: relative;
     border: 1px solid #999;
+    border-top: none;
     background-color: #888;
     font-size: 14px;
     text-align: left;
@@ -28,8 +52,8 @@
     box-sizing: border-box;
     width: 100%;
     border-bottom: 1px solid #999;
-    background-color: #e6e6e6;
-    color: #555;
+    background-color: #c7c7c7;
+    color: black;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
@@ -47,9 +71,10 @@
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-    border-right: 1px solid #aaa;
-    background: #e6e6e6;
-    text-align: left;
+    /*border-right: 1px solid #aaa;*/
+    background: #c7c7c7;
+    text-align: center;
+    padding: 0.5rem;
     vertical-align: bottom;
     overflow: hidden
 }
@@ -306,7 +331,7 @@
     background-color: #fff;
     white-space: nowrap;
     overflow: visible;
-    color: #333
+    color: black;
 }
 
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-calcs {
@@ -325,7 +350,7 @@
 .tabulator .tabulator-footer {
     padding: 5px 10px;
     border-top: 1px solid #999;
-    background-color: #e6e6e6;
+    background-color: #c7c7c7;
     text-align: right;
     color: #555;
     font-weight: 700;
@@ -464,11 +489,11 @@
 }
 
 .tabulator-row.tabulator-row-even {
-    background-color: #efefef
+    background-color: rgb(227, 229, 232);
 }
 
 .tabulator-row.tabulator-selectable:hover {
-    background-color: #bbb;
+    background-color: #b6bcce;
     cursor: pointer
 }
 
@@ -554,7 +579,7 @@
     position: relative;
     box-sizing: border-box;
     padding: 4px;
-    border-right: 1px solid #aaa;
+    /*border-right: 1px solid #aaa;*/
     vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
