@@ -399,6 +399,14 @@ TabulatorTable.prototype.search = function (query) {
     });
 };
 
+// Обновление текущей страницы
+TabulatorTable.prototype.updateTable = function(){
+    if (!this.isEditing && !this.isAdding) {
+        var currentPage = this.table.getPage();
+        this.table.setPage(currentPage)
+    }
+};
+
 // Инициализация таблицы после полной загрузки страницы.
 document.addEventListener("DOMContentLoaded", function () {
     // Создание экземпляра TabulatorTable с передачей параметров.
@@ -410,5 +418,10 @@ document.addEventListener("DOMContentLoaded", function () {
         [10, 25, 50, 100], // Варианты количества строк на странице.
         "server" // Режим загрузки данных.
     );
+
+    var timer = setInterval(function (){
+        console.log("UPDATE")
+        tabulator.updateTable()
+    }, 5000);
 });
 
