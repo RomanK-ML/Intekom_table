@@ -419,6 +419,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "server" // Режим загрузки данных.
     );
 
+    var tabulator2 = new TabulatorTable(
+        "http://localhost:3000/api/data2", // URL для получения данных.
+        "table-container2", // Идентификатор контейнера для таблицы.
+        "400px", // Высота таблицы.
+        25, // Количество строк на странице.
+        [10, 25, 50, 100], // Варианты количества строк на странице.
+        "server" // Режим загрузки данных.
+    );
+
     var timer = setInterval(function (){
         console.log("UPDATE")
         tabulator.updateTable()
