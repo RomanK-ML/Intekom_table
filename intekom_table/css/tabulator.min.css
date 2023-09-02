@@ -5,6 +5,14 @@ button {
     margin:  0 0.1rem;
 }
 
+.editingRowDisabled {
+    background-color: rgba(48,48,48,0.8) !important;
+}
+
+.editingRow {
+    background-color: rgb(182, 188, 206) !important;
+}
+
 #table-container{
     width: calc(100% - 204px);
     margin-top: 0.5rem;

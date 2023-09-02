@@ -330,7 +330,8 @@ TabulatorTable.prototype.highlightEditingRow = function (rowHighlight) {
         }
 
         // Изменение цвета фона строки на темный.
-        row.getElement().style.backgroundColor = "rgba(48,48,48,0.8)";
+        //row.getElement().style.backgroundColor = "rgba(48,48,48,0.8)";
+        row.getElement().classList.add("editingRowDisabled");
     }
 
     var highlightButtons = rowHighlight.getElement().querySelectorAll('[data-action]'); // Получение кнопок выделенной строки.
@@ -344,7 +345,9 @@ TabulatorTable.prototype.highlightEditingRow = function (rowHighlight) {
     }
 
     // Изменение цвета фона выделенной строки на светлый.
-    rowHighlight.getElement().style.backgroundColor = "rgb(182, 188, 206)";
+    //rowHighlight.getElement().style.backgroundColor = "rgb(182, 188, 206)";
+    rowHighlight.getElement().classList.remove("editingRowDisabled")
+    rowHighlight.getElement().classList.add("editingRow");
 };
 
 
@@ -365,7 +368,9 @@ TabulatorTable.prototype.unHighlightEditingRow = function () {
             button.hidden = !(buttonAction === "edit" || buttonAction === "delete"); // Отмена скрытия ненужных кнопок.
         }
 
-        row.getElement().style.backgroundColor = ""; // Сброс цвета фона строки.
+        //row.getElement().style.backgroundColor = ""; // Сброс цвета фона строки.
+        row.getElement().classList.remove("editingRow")
+        row.getElement().classList.remove("editingRowDisabled")
     }
 };
 
